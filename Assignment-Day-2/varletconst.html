@@ -1,0 +1,178 @@
+<html>
+    <head>
+        <title>
+            Var-Let-Const
+        </title>
+    </head>
+    <body>
+        <h1><strong><center>Differences between var,let&const</center></strong><h1></h1>
+        <table border=1 bgcolor="skyblue">
+            <tr>
+                <th>VAR</th>
+                <th>LET</th>
+                <th>CONST</th>
+            </tr>
+            <tr>
+                <td>The JavaScript variables statement is used to declare a variable and, optionally, we can initialize the value of that variable</td>
+                <td>The let statement declares a local variable in a block scope. It is similar to var, in that we can optionally initialize the variable.</td>
+                <td>const statement values can be assigned once and they cannot be reassigned</td>
+            </tr>
+            <tr>
+                <td>Variable declarations are processed before the execution of the code.<br>
+                    The scope of a JavaScript variable declared with var is its current execution context.<br>
+                    The scope of a JavaScript variable declared outside the function is glob</td>
+                <td>The let statement allows you to create a variable with the scope limited to the block on which it is used.<br>
+                    It is similar to the variable we declare in other languages like Java, .NET, etc.</td>
+                <td>The scope of const statement works similar to let statements.</td>
+            </tr>
+            <tr>
+                <td>Example: var a =10;</td>
+                <td>Example: let a =10;</td>
+                <td>Example: const a =10;</td>
+            </tr>
+        </table>
+        <h3><strong>Practical examples for each Keyword</strong></h3>
+        <h4><strong>The Output Should be showed on <mark>console</mark> please look in Console by pressing <mark>ctrl+shift+j</mark></strong></h4>
+        <h4>Example for an var Keyword</h4><a></a>
+        <a style="color: orange;   background-color: #eee;
+        border: 1px solid #999;
+        display: block;
+        ">
+        <pre>
+            <code>
+                <strong>function nodeSimplified(){
+                    var a =10; 
+                    console.log(a);  // output 10 
+                    if(true){                     
+                     var a=20;                   
+                     console.log(a); // output 20 
+                    }                             
+                    console.log(a);  // output 20 
+                }
+                </strong>
+            </code>
+        </pre>
+        <strong style="color: black;">TO clear console click on clear button</strong><br>
+        <button onclick="nodeSimplified()">Try here</button>
+        <button onclick="reload_fun1()">Clear</button>
+        </a>
+        <h4>Example for a Let Keyword</h4>
+        <a style="color: orange;   background-color: #eee;
+        border: 1px solid #999;
+        display: block;
+        ">
+        <pre>
+            <code>
+                <strong>
+                    function nodeSimplified(){
+                      let a =10;
+                      console.log(a);  // output 10
+                      if(true){
+                       let a=20;
+                       console.log(a); // output 20
+                      }
+                      console.log(a);  // output 10
+                    }
+                </strong>
+            </code>
+        </pre>
+        <strong style="color: black;">TO clear console click on clear button</strong><br>
+        <button onclick="nodeSimplified1()">Try here</button>
+        <button onclick="reload_fun1()">Clear</button>
+        </a>
+        <a style="color: orange;   background-color: #eee;
+        border: 1px solid #999;
+        display: block;
+        ">
+        <pre>
+            <code>
+                <strong>
+                    function nodeSimplified(){
+                        let a =10;
+                        let a =20; //throws syntax error
+                        console.log(a); 
+                    }
+                </strong>
+            </code>
+        </pre>
+        <strong style="color: black;">TO clear console click on clear button</strong><br>
+        <button onclick="nobi()">Try here</button>
+        <button onclick="reload_fun1()">Clear</button>
+        </a>
+        <h4>Example for a Const Keyword</h4>
+        <a style="color: orange;   background-color: #eee;
+        border: 1px solid #999;
+        display: block;
+        ">
+        <pre>
+            <code>
+                <strong>
+                    function nodeSimplified(){
+                        const MY_VARIABLE =10;
+                        console.log(MY_VARIABLE);  //output 10 
+                        }
+                </strong>
+            </code>
+        </pre>
+        <strong style="color: black;">TO clear console click on clear button</strong><br>
+        <button onclick="nodeSimplified4()">Try here</button>
+        <button onclick="reload_fun1()">Clear</button>
+        </a>
+        <a style="color: orange;   background-color: #eee;
+        border: 1px solid #999;
+        display: block;
+        ">
+        <pre>
+            <code>
+                <strong>
+                    function nodeSimplified(){
+                    const MY_VARIABLE =10;
+                    console.log(MY_VARIABLE);  //output 10
+                    MY_VARIABLE =20;           //throws type error
+                    console.log(MY_VARIABLE); 
+                    }
+                </strong>
+            </code>
+        </pre>
+        <strong style="color: black;">TO clear console click on clear button</strong><br>
+        <button onclick="nobi1()">Try here</button>
+        <button onclick="reload_fun1()">Clear</button>
+        </a>
+        <script>
+                function nodeSimplified(){
+                var a =10;
+                console.log(a);  // output 10
+                if(true){
+                var a=20;
+                console.log(a); // output 20
+                }
+                console.log(a);  // output 20
+                }
+                function reload_fun1()
+                {
+                    console.clear();
+                }
+                function nodeSimplified1(){
+                let a =10;
+                console.log(a);  // output 10
+                if(true){
+                let a=20;
+                console.log(a); // output 20
+                }
+                console.log(a);  // output 10
+                }
+                function nodeSimplified4(){
+                const MY_VARIABLE =10;
+                console.log(MY_VARIABLE);  //output 10 
+                }
+                function nobi(){
+                var scriptTag = document.createElement('script');
+                scriptTag.setAttribute('src','syntax.js');
+                document.head.appendChild(scriptTag)
+                }
+                function nobi1(){
+                    console.error("Uncaught TypeError: Assignment to constant variable.")
+                }
+        </script>
+    </body>
+</html>
