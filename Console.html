@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>
+            Console Functions
+        </title>
+    </head>
+    <body>
+        <h1>
+            <strong>Web Console</strong>
+        </h1>
+        <p>A Web console is a tool which is mainly used to log information associated with a web page like: network requests, javascript, security errors, warnings, CSS etc. It enables us to interact with a web page by executing javascript expression in the contents of the page.</p>
+        <h2>
+            We are performing the  different Console functions.
+        </h2>
+        <a style="color:red;"><strong>1)console.clear() method </strong></a>
+        <p>Used to clear the console. The console will be cleared, in case of Chrome a simple overlayed text will be printed like : ‘Console was cleared’ while in firefox no message is returned.</p>
+        Example:console.clear();<br>
+        <a style="color:red;"><strong>2)console.log() method</strong></a>
+        <p>Mainly used to log(print) the output to the console. We can put any type inside the log(), be it a string, array, object, boolean etc.</p>
+        Example:console.log();<br>
+        <a style="color:red;"><strong>3)console.error() method </strong></a>
+        <p>Used to log error message to the console. Useful in testing of code. By default the error message will be highlighted with red color.</p>
+        Example:console.error();<br>
+        <a style="color:red;"><strong>4)console.warn() method </strong></a>
+        <p>Used to log warning message to the console. By default the warning message will be highlighted with yellow color.</p>
+        Example:console.warn();<br>
+        <a style="color:red;"><strong>5)console.time() & console.timeEnd() method </strong></a>
+        <p>Whenever we want to know the amount of time spend by a block or a function, we can make use of the time() and timeEnd() methods provided by the javascript console object. They take a label which must be same, and the code inside can be anything( function, object, simple console).</p>
+        Example:console.time(); & console.timeEnd();<br>
+        <a style="color:red;"><strong>6)console.table() method </strong></a>
+        <p>This method allows us to generate a table inside a console. The input must be an array or an object which will be shown as a table.</p>
+        Example:console.table();<br>
+        <a style="color:red;"><strong>7)console.count() method </strong></a>
+        <p>This method is used to count the number that the function hit by this counting method.</p>
+        Example:console.count();<br>
+        <a style="color:red;"><strong>8)console.group() & console.groupEnd() method </strong></a>
+        <p>group() and groupEnd() methods of the console object allows us to group contents in a separate block, which will be indented. Just like the time() and the timeEnd() they also accepts label, again of same value.</p>
+        Example:console.group(); & console.groupEnd()<br>
+        For examples please look in Console by pressing <mark>ctrl+shift+j</mark>
+        <p>Click the button to clear console</p>
+        <button onclick="reload_fun1()">Clear</button>
+        <p>Click the button to reload the current page.(Because you cleared Everything.So,to see all examples again reload the page.)</p>
+        <button onclick="reload_fun()">Reload</button>
+        <script>
+                console.log('Here You can See the console.clear() Example:');
+                console.clear(); 
+                console.log('Here You can See the Log Example:');  
+                console.log(1); 
+                console.log(true); 
+                console.log(null);
+                console.log([1, 2, 3, 4]);
+                console.log('Here You can See the console.error() Example:');
+                console.error('This is a simple error');
+                console.log('Here You can See the console.warn() Example:');
+                console.warn('This is a warning.');
+                console.log('Here You can See the console.time() & console.timeEnd() Example:');
+                console.time('abc'); 
+                let fun =  function(){ 
+                console.log('fun is running'); 
+                } 
+                let fun2 = function(){ 
+                console.log('fun2 is running..'); 
+                } 
+                fun();  
+                fun2();
+                console.timeEnd('abc');
+                console.log('Here You can See the console.table() method Example:');
+                console.table({'a':1, 'b':2});
+                console.log('Here You can See the console.count() method  Example:');
+                for(let i=0;i<5;i++){ 
+	                console.count(i); 
+                }
+                console.log('Here You can See the console.group() & console.groupEnd() method  Example:'); 
+                console.group('simple'); 
+                console.warn('warning!'); 
+                console.error('error here'); 
+                console.log('vivi vini vici'); 
+                console.groupEnd('simple'); 
+                console.log('new section'); 
+        </script>
+        <script>
+                function reload_fun()
+                {
+                    location.reload();
+                }
+                function reload_fun1()
+                {
+                    console.clear();
+                }
+        </script>
+    </body>
+</html>
