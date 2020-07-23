@@ -72,4 +72,4 @@ P.S. The code should work for any n, not be hard-tuned for any fixed value
 ## Question 8 :
 Replace Function Expressions with arrow functions in the code below:
 <br><br>
-![Q8 Image](https://github.com/VikrantShah/Lets_Upgrade_JS_Assignments/blob/master/Assignment_5/images/Q8.JPG)
+![Q8 Image](https://github.com/shivasai-391/JS-Assignment/blob/master/Assignment-Day-5/images/Q8.JPG)
