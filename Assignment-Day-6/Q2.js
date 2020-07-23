@@ -83,19 +83,19 @@ class Admin extends Moderator
 }
 
 
-let user1 = new User("Vikrant", 20, "vikrantshah2000@gmail.com");
+let user1 = new User("Shivasai", 20, "alle.shivasai@gmail.com");
 user1.logIn();
 user1.logOut();
 
 
-let moderator1 = new Moderator("Dilip", 22, "dilip@gmail.com");
+let moderator1 = new Moderator("vinay", 22, "vinaydaram12p@gmail.com");
 moderator1.logIn();
 user1 = moderator1.addCoins(user1);
 user1 = moderator1.removeCoins(user1);
 moderator1.logOut();
 
 
-let admin1 = new Admin("Milip", 25, "milip@gmail.com");
+let admin1 = new Admin("uppi", 25, "upenderraina555@gmail.com");
 admin1.logIn();
 user1 = admin1.addCourses(user1, "Python");
 user1 = admin1.addCourses(user1, "JavaScript");
