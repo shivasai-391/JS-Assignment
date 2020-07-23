@@ -9,7 +9,7 @@ Create a for loop that iterates up to 100 while outputting "fizz" at multiples o
 ## Question 2 :
 Destructure the following object
 <br><br>
-![Q2 Image](https://github.com/VikrantShah/Lets_Upgrade_JS_Assignments/blob/master/Assignment_5/images/Q2.JPG)
+![Q2 Image](https://github.com/shivasai-391/JS-Assignment/blob/master/Assignment-Day-5/images/Q2.JPG)
 
 <br><br>
 ## Question 3 :
