@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            QuoteGenerator
+        </title>
+        <link rel="stylesheet" type="text/css" href="quote123.css">
+    </head>
+    
+    <body onload="startDate(); startTime()">
+      <div class="container">
+        <div id="display"></div>
+        <div id="date"></div>   
+    </div>
+          <div id="content">
+            <p id="quote"> “Anyone who has ever made anything of importance was disciplined.”<br/>-Andrew Hendrixson</p>
+          </div>
+        <div id="b-nav">
+          <ul>
+            <button id="gen" onclick="genQuote()"><strong>Next Quote</strong></button>
+          </ul>
+        </div>
+        
+    <script>
+        function startTime() {
+    var today=new Date();
+    var h=today.getHours();
+    var m=today.getMinutes();
+    var s=today.getSeconds();
+    var ampm = "";
+    m = checkTime(m);
+
+    if (h > 12) {
+    	h = h - 12;
+    	ampm = " PM";
+    } else if (h == 12){
+        h = 12;
+    	ampm = " AM";
+    } else if (h < 12){
+        ampm = " AM";
+    } else {
+        ampm = "PM";
+    };
+  
+  if(h==0) {
+    h=12;
+  }
+    
+    document.getElementById('display').innerHTML = h+":"+m+ampm;
+    var t = setTimeout(function(){startTime()},500);
+}
+
+function checkTime(i) {
+    if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+
+function genQuote() {
+  var randNum = Math.floor(Math.random() * 32) + 1;
+  document.getElementById('quote').innerHTML = quotes[randNum];
+}
+
+//quote array
+var quotes = ["Blank","\"If you cannot do great things, do small things in a great way.\"<br> - Napoleon Hill", 
+"\"Be yourself; everyone else is already taken.\"<br> - Oscar Wilde",
+"\"Do what you can, with what you have, where you are.\"<br> - Theodore Roosevelt", 
+"\"Dude, suckin' at something is the first step at being sorta good at something.\"<br>-  Jake <small><em>(Adventure Time)</em></small>",
+"\"Either I will find a way, or I will make one.\"<br> - Philip Sidney", 
+"\"Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.\"<br>- Thomas A. Edison", 
+"\"You are never too old to set another goal or to dream a new dream.\"<br>- C.S Lewis", 
+"\"If you can dream it, you can do it.\"<br>- Walt Disney", 
+"\"Never give up, for that is just the place and time that the tide will turn.\"<br>- Harriet Beecher Stowe", 
+"\"I know where I'm going and I know the truth, and I don't have to be what you want me to be. I'm free to be what I want.\"<br>- Muhammad Ali", 
+"\"If you always put limit on everything you do, physical or anything else. It will spread into your work and into your life. There are no limits. There are only plateaus, and you must not stay there, you must go beyond them.\"<br>- Bruce Lee",
+"\"If You Are Working On Something That You Really Care About, You Don’t Have To Be Pushed. The Vision Pulls You.\"<br>- Steve Jobs",
+"\"People Who Are Crazy Enough To Think They Can Change The World, Are The Ones Who Do.\"<br>- Rob Siltanen",
+"\"Failure Will Never Overtake Me If My Determination To Succeed Is Strong Enough.\"<br>- Og Mandino",
+"\"Entrepreneurs Are Great At Dealing With Uncertainty And Also Very Good At Minimizing Risk. That’s The Classic Entrepreneur.\"<br>-Mohnish Pabrai",
+"\"We May Encounter Many Defeats But We Must Not Be Defeated.\"<br>- Maya Angelou",
+"\"Knowing Is Not Enough; We Must Apply. Wishing Is Not Enough; We Must Do.\"<br>- Johann Wolfgang Von Goethe",
+"\"Imagine Your Life Is Perfect In Every Respect; What Would It Look Like?\"<br>- Brian Tracy",
+"\"We Generate Fears While We Sit. We Overcome Them By Action.\"<br>- Dr. Henry Link",
+"\"Whether You Think You Can Or Think You Can’t, You’re Right.\"<br>-Henry Ford",
+"\"Security Is Mostly A Superstition. Life Is Either A Daring Adventure Or Nothing.\"<br>- Life Quote By Helen Keller",
+"\"The Man Who Has Confidence In Himself Gains The Confidence Of Others.\"<br>- Hasidic Proverb",
+"\"The Only Limit To Our Realization Of Tomorrow Will Be Our Doubts Of Today.\"<br>- Franklin D. Roosevelt",
+"\"Creativity Is Intelligence Having Fun.\"<br>- Albert Einstein",
+"\"What You Lack In Talent Can Be Made Up With Desire, Hustle And Giving 110% All The Time.\"<br>- Don Zimmer",
+"\"Do What You Can With All You Have, Wherever You Are.\"<br>-Theodore Roosevelt",
+"\"Develop An ‘Attitude Of Gratitude’. Say Thank You To Everyone You Meet For Everything They Do For You.\"<br>- Brian Tracy",
+"\"You Are Never Too Old To Set Another Goal Or To Dream A New Dream.\"<br>- C.S. Lewis",
+"\"To See What Is Right And Not Do It Is A Lack Of Courage\"<br>- Confucius",
+"\"Reading Is To The Mind, As Exercise Is To The Body.\"<br>- Brian Tracy",
+"\"Fake It Until You Make It! Act As If You Had All The Confidence You Require Until It Becomes Your Reality.\"<br>- Brian Tracy",
+"\"For Every Reason It’s Not Possible, There Are Hundreds Of People Who Have Faced The Same Circumstances And Succeeded.\"<br>- Jack Canfield",
+ ];
+
+//date
+function startDate() {
+  var d = new Date();
+  var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  document.getElementById("date").innerHTML = days[d.getDay()]+" | "+[d.getMonth()+1]+"/"+d.getDate()+"/"+d.getFullYear();
+}
+
+    </script>
+    </body>    
+</html>
